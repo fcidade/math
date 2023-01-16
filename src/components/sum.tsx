@@ -25,7 +25,7 @@ export const SumExercise = () => {
     }, [newExercise])
   
     return (
-      <div className="App">
+      <div>
         <h1>Exercício</h1>
         <p>{a} + {b}</p>
         <input type="number" value={userAnswer} onChange={Handle.onChangeNumber(setUserAnswer)} />

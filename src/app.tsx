@@ -1,9 +1,9 @@
-import { SumExercise } from "./components/sum";
+import { MajorRelativeExercise } from "./components/major-relative";
 
 const App = () => {
   return (
     <div className="App">
-      <SumExercise/>
+      <MajorRelativeExercise/>
     </div>
   );
 }
