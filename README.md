@@ -1,3 +1,17 @@
+Exercises:
+
+Math:
+- [X] Sum
+- [ ] Sub
+- [ ] Mult
+- [ ] Div
+
+Music:
+- [ ] Whats the major relative
+- [ ] Whats the minor relative
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
