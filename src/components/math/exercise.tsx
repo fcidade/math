@@ -24,9 +24,9 @@ export const Exercise = ({
         <input type="submit" value="Verificar" autoFocus />
       </form>
       <hr />
-      <h2>Preferências:</h2>
-      <label>Menor número: <input type="number" value={min} onChange={Handle.onChangeNumber(setMin)} /></label><br />
-      <label>Maior número: <input type="number" value={max} onChange={Handle.onChangeNumber(setMax)} /></label>
+      {/* <h2>Preferências:</h2> */}
+      {/* <label>Menor número: <input type="number" value={min} onChange={Handle.onChangeNumber(setMin)} /></label><br />
+      <label>Maior número: <input type="number" value={max} onChange={Handle.onChangeNumber(setMax)} /></label> */}
 
     </div>
   );
