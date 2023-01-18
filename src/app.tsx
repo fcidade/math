@@ -1,9 +1,14 @@
-import { MajorRelativeExercise } from "./components/major-relative";
+import { SubExercise, SumExercise } from "./components/math";
+import { DivExercise } from "./components/math/div";
+import { MultExercise } from "./components/math/mult";
 
 const App = () => {
   return (
     <div className="App">
-      <MajorRelativeExercise/>
+      <SumExercise/>
+      <SubExercise/>
+      <MultExercise/>
+      <DivExercise/>
     </div>
   );
 }
