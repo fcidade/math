@@ -15,7 +15,7 @@ export const useExercise = (verifyFn: (a: number, b: number, guess: number) => b
   }, [min, max, setA, setB]);
 
   useEffect(() => {
-    newExercise();
+    // newExercise();
   }, [newExercise]);
 
   return {

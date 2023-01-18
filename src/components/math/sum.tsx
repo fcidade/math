@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Random } from "../../helpers/random"
 import { Exercise } from "./exercise"
 import { useExercise } from "./use-exercise"
@@ -25,6 +25,7 @@ const exercises: ExerciseConfigs[] = [
 export const SumExercise = () => {
   const { a, b, verify, ...others } = useExercise((a, b, guess) => guess === a + b)
   const [userAnswer, setUserAnswer] = useState(0)
+  const [formula, setFormula] = useState('')
 
   const onSubmit = () => {
     if (verify(userAnswer)) {
@@ -34,19 +35,21 @@ export const SumExercise = () => {
     }
   }
 
-  const formulaWithText = Random.oneOf(exercises[0].questionTemplates)
-  const bindVariablesOnFormula = formulaWithText
-    .trim()
-    .replace('[a]', a.toString())
-    .replace('[b]', b.toString())
+  useEffect(() => {
+    const formulaWithText = Random.oneOf(exercises[0].questionTemplates)
+    const bindVariablesOnFormula = formulaWithText
+      .trim()
+      .replace('[a]', a.toString())
+      .replace('[b]', b.toString())
+    setFormula(bindVariablesOnFormula)
+  }, [a, b])
 
   return (
     <Exercise
       {...{
         ...others,
         name: 'Adição',
-        // formula: `${a} + ${b}`,
-        formula: bindVariablesOnFormula,
+        formula: formula,
         userAnswer, setUserAnswer,
         onSubmit,
       }}
